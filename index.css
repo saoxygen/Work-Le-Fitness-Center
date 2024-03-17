@@ -46,11 +46,17 @@
   justify-content: space-around;
   list-style-type: none;
   gap: 6rem;
+  z-index: 2;
+}
+
+#menu li {
+  cursor: pointer;
 }
 
 #menu li a {
   text-decoration: none;
   color: #793c5d;
+  cursor: pointer;
 }
 
 #menu li a:hover {
@@ -120,6 +126,9 @@
   height: 100%;
 }
 
+.hero-content-text img {
+  transform: rotate(-120deg);
+}
 #title {
   margin-top: 20px;
   width: 50%;
@@ -243,7 +252,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  left: 50%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -331,4 +340,136 @@
   color: #fefefa;
   position: absolute;
   top: 0px;
+}
+
+@media screen and (max-width: 4000px) {
+  /* .card-content ul li,
+  .card-content {
+    font-size: 1.8rem;
+  }
+
+  .card-header h2 {
+    font-size: 3rem;
+  }
+
+  .nav div h1 {
+    font-size: 3.6rem;
+  }
+
+  .card-content {
+    width: 50%;
+    height: 90%;
+  }
+
+  #icons div {
+    height: 100px;
+    width: 100px;
+  }
+
+  #icons button {
+    font-size: 46px;
+  }
+  #menu {
+    font-size: 2rem;
+  } */
+}
+
+@media screen and (max-width: 1024px) {
+  #icons {
+    position: fixed;
+    flex-direction: row;
+    left: 0;
+    top: 40%;
+    justify-content: space-between;
+    height: 100px;
+    width: 100vw;
+    padding: 0px 10px;
+  }
+
+  #hero {
+    justify-content: center;
+    height: 50vh;
+    overflow: hidden;
+    background-size: contain;
+    background-color: white;
+  }
+
+  #hero .content {
+    backdrop-filter: blur(0px);
+    background-image: url("Product images/logo.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  #nav {
+    justify-content: center;
+    width: 100vw;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  #title,
+  .hero-content-text,
+  .lg1,
+  .lg2,
+  .lg3 {
+    display: none;
+  }
+
+  #hero .content img {
+    width: 100vw;
+  }
+
+  .lg3 {
+    transform: rotate(0deg);
+  }
+  #menu {
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+  }
+
+  #services #cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+  }
+
+  .icon span {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+
+    font-size: 3rem;
+  }
+
+  .services {
+    width: 90%;
+  }
+
+  #about {
+    height: auto;
+  }
+
+  #about #cards {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #about .about2 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #about .services {
+    height: auto;
+  }
+
+  .about2 {
+    margin-bottom: 10px;
+  }
 }
